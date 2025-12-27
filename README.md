@@ -137,23 +137,16 @@ All relationships are enforced using foreign keys.
 
 These APIs are used to manage products in the gift shop.
 
-- **POST `/api/products`**  
-  → Add a new product  
+| Method | Endpoint | Description |
+|------|---------|-------------|
+| POST | `/api/products` | Create a new product |
+| GET | `/api/products` | Get all products |
+| GET | `/api/products/{id}` | Get product by ID |
+| PUT | `/api/products/{id}` | Update product |
+| DELETE | `/api/products/{id}` | Delete product |
+| GET | `/api/products/category/{categoryName}` | Get products by category |
+| GET | `/api/products/name/{productName}` | Search product by name |
 
-- **GET `/api/products`**  
-  → Get all products  
-
-- **GET `/api/products/{id}`**  
-  → Get one product using its ID  
-
-- **PUT `/api/products/{id}`**  
-  → Update product details  
-
-- **GET `/api/products/name/{name}`**  
-  → Find product by name  
-
-- **GET `/api/products/category/{categoryName}`**  
-  → Get products under one category  
 
 ⚠️ **Important:**  
 A product cannot be created unless its category already exists.
@@ -164,23 +157,14 @@ A product cannot be created unless its category already exists.
 
 These APIs handle users of the system.
 
-- **POST `/api/users`**  
-  → Create a new user  
-
-- **GET `/api/users`**  
-  → Get all users  
-
-- **GET `/api/users/{id}`**  
-  → Get one user by ID  
-
-- **PUT `/api/users/{id}`**  
-  → Update user details  
-
-- **GET `/api/users/role/{role}`**  
-  → Get users by role  
-
-- **GET `/api/users/username/{username}/role/{role}`**  
-  → Filter users using username and role  
+| Method | Endpoint | Description |
+|------|---------|-------------|
+| POST | `/api/users` | Create a new user |
+| GET | `/api/users` | Get all users |
+| GET | `/api/users/{id}` | Get user by ID |
+| PUT | `/api/users/{id}` | Update user |
+| GET | `/api/users/role/{role}` | Get users by role |
+| GET | `/api/users/search/{username}/{role}` | Search user by username and role |
 
 ---
 
@@ -188,14 +172,11 @@ These APIs handle users of the system.
 
 Used when users give feedback on products.
 
-- **POST `/api/feedback`**  
-  → Add feedback  
-
-- **GET `/api/feedback/product/{productId}`**  
-  → Get feedback for a product  
-
-- **GET `/api/feedback/user/{userId}`**  
-  → Get feedback by a user  
+| Method | Endpoint | Description |
+|------|---------|-------------|
+| POST | `/api/feedbacks` | Add feedback |
+| GET | `/api/feedbacks/product/{productId}` | Get feedback by product |
+| GET | `/api/feedbacks/user/{userId}` | Get feedback by user |
 
 ---
 
@@ -203,14 +184,11 @@ Used when users give feedback on products.
 
 Used when users rate products.
 
-- **POST `/api/ratings`**  
-  → Add rating  
-
-- **GET `/api/ratings/product/{productId}`**  
-  → Get all ratings of a product  
-
-- **GET `/api/ratings/product/{productId}/average`**  
-  → Get average rating of a product  
+| Method | Endpoint | Description |
+|------|---------|-------------|
+| POST | `/api/ratings` | Add rating |
+| GET | `/api/ratings/product/{productId}` | Get ratings for product |
+| GET | `/api/ratings/product/{productId}/average` | Get average rating |
 
 ---
 
